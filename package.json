@@ -1,6 +1,6 @@
 {
   "name": "@aok/design-system",
-  "version": "0.8.2",
+  "version": "1.0.0",
   "description": "AOK Design System for mobile applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
