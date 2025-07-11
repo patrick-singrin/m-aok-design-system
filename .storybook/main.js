@@ -12,6 +12,11 @@ const config = {
     options: {},
   },
   staticDirs: ['../public'],
+  // Ensure proper static file serving for deployment
+  managerHead: (head) => `
+    ${head}
+    <base href="/" />
+  `,
   typescript: {
     check: false,
     reactDocgen: 'react-docgen-typescript',
@@ -39,6 +44,10 @@ const config = {
     });
 
     config.resolve.extensions.push('.ts', '.tsx');
+
+    // Ensure proper public path for deployment
+    config.output = config.output || {};
+    config.output.publicPath = '/';
 
     return config;
   },
