@@ -1,46 +1,125 @@
-# Getting Started with Create React App
+# AOK Design System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A mobile-first React component library for iOS and Android applications.
 
-## Available Scripts
+## 🚀 Getting Started
 
-In the project directory, you can run:
+```bash
+npm install @aok/design-system
+```
 
-### `npm start`
+### Basic Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```jsx
+import { Button, Card, Input } from '@aok/design-system';
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+function App() {
+  return (
+    <Card>
+      <Input label="Email" type="email" />
+      <Button variant="primary">Submit</Button>
+    </Card>
+  );
+}
+```
 
-### `npm test`
+## 📚 Documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+View the component library in [Storybook](http://localhost:6006):
 
-### `npm run build`
+```bash
+npm run storybook
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 Design Tokens
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Colors**: AOK brand green (#005E3F) with semantic variants
+- **Typography**: AOK Buenos Aires Text
+- **Spacing**: 8px grid system
+- **Touch Targets**: 44px minimum for mobile accessibility
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📱 Mobile-First Components
 
-### `npm run eject`
+All components are optimized for mobile interfaces:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- ✅ Touch-friendly interactions (44px+ targets)
+- ✅ Dark mode support
+- ✅ Responsive design
+- ✅ WCAG 2.1 AA accessibility
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prerequisites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Node.js 16+
+- npm or yarn
 
-## Learn More
+### Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/aok/design-system.git
+cd design-system
+npm install
+npm run storybook
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Building
+
+```bash
+npm run build
+```
+
+## 📦 Available Components
+
+### Foundation (Complete)
+- Button, Icon
+
+### Navigation (Complete) 
+- NavBar, TabBar
+
+### Controls (Complete)
+- IconButton, FAB
+
+### Inputs (Complete)
+- Input, Dropdown
+
+### Containers (Complete)
+- Card, List
+
+### Feedback (Complete)
+- Snackbar
+
+### In Development
+- Advanced form controls
+- Data display components
+- Modal system
+
+## 🤝 Contributing
+
+1. Create feature branch from `develop`
+2. Make changes with proper TypeScript types
+3. Add Storybook stories
+4. Ensure accessibility compliance
+5. Create pull request
+
+### Development Guidelines
+
+- All components must support dark mode
+- Maintain 44px+ touch targets
+- Follow existing TypeScript patterns
+- Include comprehensive Storybook documentation
+
+## 📖 Resources
+
+- [Figma Design System](https://figma.com/aok-design-system)
+- [Component Guidelines](./docs/guidelines.md)
+- [Accessibility Standards](./docs/accessibility.md)
+
+## 📄 License
+
+MIT License - see [LICENSE](./LICENSE) for details.
+
+---
+
+**Version**: 0.8.2  
+**Maintained by**: AOK Design System Team
