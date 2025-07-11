@@ -2,11 +2,11 @@
 
 All notable changes to the AOK Design System will be documented in this file.
 
-## [1.0.0] - 2025-11-07 🚀 INITIAL RELEASE
+## [1.0.0] - 2025-07-11
 
-### 🎉 Project Launch - Complete Design System Created in One Day!
+### 🎉 Initial Production Release
 
-This marks the initial release of the AOK Design System with 11 production-ready components built from scratch.
+First stable release of the AOK Design System with core component library and comprehensive documentation.
 
 ### ✅ Foundation Components
 - **Button** - Primary, secondary, text variants with loading states and icons
@@ -42,39 +42,38 @@ This marks the initial release of the AOK Design System with 11 production-ready
 
 ---
 
-## Previous Versions (Historical Reference)
+## [0.9.0] - 2025-06-20
 
 ### Added
 - TabBar component for bottom navigation
 - FAB (Floating Action Button) component
 - Snackbar component for toast notifications  
-- Dropdown component with search and multi-select
-- Comprehensive mobile examples in Storybook
-- Dark mode support for all new components
+- Enhanced dark mode support
 
 ### Fixed
 - Icon component color prop TypeScript definitions
 - Touch target sizing consistency across components
-- Focus management in dropdown component
+- Focus management improvements
 
 ### Changed
 - Improved Storybook organization and navigation
 - Updated design token documentation
 - Enhanced accessibility compliance documentation
 
-## [0.8.1] - 2024-01-10
+## [0.8.0] - 2025-05-15
 
 ### Added
 - Input component with validation states
+- Dropdown component with search and multi-select
 - List component with multiple item types
 - Character counting for input fields
-- Clear functionality for input fields
 
 ### Fixed
 - Card component shadow rendering on Android
 - Button loading state accessibility
+- TypeScript strict mode compatibility
 
-## [0.8.0] - 2024-01-05
+## [0.7.0] - 2025-04-10
 
 ### Added
 - Complete foundation components (Button, Icon)
@@ -82,14 +81,13 @@ This marks the initial release of the AOK Design System with 11 production-ready
 - Card system with multiple variants
 - IconButton component with shapes and states
 - Dark mode theme system
-- Mobile viewport configuration in Storybook
 
 ### Changed
 - Migrated to Storybook 8.x
 - Improved TypeScript definitions
 - Updated design token structure
 
-## [0.7.0] - 2023-12-20
+## [0.6.0] - 2025-03-05
 
 ### Added
 - Initial design token system
@@ -103,14 +101,6 @@ This marks the initial release of the AOK Design System with 11 production-ready
 - Storybook configuration
 - Component development structure
 - Accessibility testing framework
-
-## [0.6.0] - 2023-12-15
-
-### Added
-- Project initialization
-- Figma design system analysis
-- Component architecture planning
-- Development workflow setup
 
 ---
 

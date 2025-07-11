@@ -287,7 +287,7 @@ function App() {
       }}>
         <p style={{ fontSize: '16px', color: '#666', margin: '0 0 8px 0' }}>
           <strong>Version</strong>: 1.0.0<br />
-          <strong>Created</strong>: November 7, 2025<br />
+          <strong>Last Updated</strong>: July 11, 2025<br />
           <strong>Status</strong>: Production Ready<br />
           <strong>Maintained by</strong>: AOK Design System Team
         </p>
