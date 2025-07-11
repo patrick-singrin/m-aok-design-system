@@ -9,8 +9,8 @@
   publish = "storybook-static"
 
 [build.environment]
-  # Node version for build
-  NODE_VERSION = "18"
+  # Node version for build - Updated to 20 for Storybook 9.0.16 compatibility
+  NODE_VERSION = "20"
   
   # Yarn version
   YARN_VERSION = "1.22.22"
