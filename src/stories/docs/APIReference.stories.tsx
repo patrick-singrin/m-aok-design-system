@@ -2,273 +2,327 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 // Documentation content component
 const DocumentationContent = () => (
-  <div style={{ padding: '20px', maxWidth: '800px', lineHeight: '1.6' }}>
-    <h1>API Reference</h1>
-    
-    <p>Complete TypeScript API documentation for all AOK Design System components.</p>
-    
-    <h2>🏗️ Foundation Components</h2>
-    
-    <h3>Button</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'text';
-  size?: 'small' | 'medium' | 'large';
-  darkMode?: boolean;
-  disabled?: boolean;
-  loading?: boolean;
-  fullWidth?: boolean;
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
-  onClick?: () => void;
-  children: React.ReactNode;
-}`}</code>
-    </pre>
-    
-    <h3>Icon</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface IconProps {
-  name: IconName;
-  size?: 'small' | 'medium' | 'large';
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'inherit';
-  darkMode?: boolean;
-  customSize?: number;
-  customColor?: string;
-  onClick?: () => void;
-}`}</code>
-    </pre>
-    
-    <h2>🧭 Navigation Components</h2>
-    
-    <h3>NavBar</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface NavBarProps {
-  title: string;
-  variant?: 'default' | 'prominent' | 'transparent';
-  darkMode?: boolean;
-  leftAction?: {
-    icon: IconName;
-    onClick: () => void;
-    'aria-label'?: string;
-  };
-  rightActions?: Array<{
-    icon: IconName;
-    onClick: () => void;
-    'aria-label'?: string;
-  }>;
-}`}</code>
-    </pre>
-    
-    <h3>TabBar</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface TabBarProps {
-  items: TabItem[];
-  activeTab: string;
-  onTabChange: (tabId: string) => void;
-  variant?: 'default' | 'elevated' | 'minimal';
-  darkMode?: boolean;
-}
+  <div style={{ 
+    padding: '0',
+    maxWidth: '100%', 
+    lineHeight: '1.6',
+    fontFamily: '"AOK Buenos Aires Text", -apple-system, BlinkMacSystemFont, "Segma UI", Roboto, sans-serif',
+    color: '#1A1A1A'
+  }}>
+    {/* Hero Section */}
+    <div style={{
+      background: 'linear-gradient(135deg, #005E3F 0%, #003D2A 100%)',
+      padding: '48px 32px',
+      color: 'white',
+      marginBottom: '0'
+    }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <h1 style={{ 
+          fontSize: '48px', 
+          fontWeight: 'bold', 
+          margin: '0 0 16px 0',
+          letterSpacing: '-0.5px'
+        }}>API Reference</h1>
+        <p style={{ 
+          fontSize: '20px', 
+          margin: '0 0 24px 0', 
+          opacity: '0.9',
+          lineHeight: '1.5'
+        }}>Complete component APIs, props, and implementation examples</p>
+        <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
+        }}>
+          <div style={{
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            background: '#4CAF50',
+            marginRight: '8px'
+          }}></div>
+          <span style={{ fontSize: '14px', fontWeight: '500' }}>TypeScript • Fully Typed • Auto-Complete</span>
+        </div>
+      </div>
+    </div>
 
-interface TabItem {
-  id: string;
-  label: string;
-  icon: IconName;
-  badge?: number;
-  disabled?: boolean;
-}`}</code>
-    </pre>
-    
-    <h2>🎮 Control Components</h2>
-    
-    <h3>IconButton</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface IconButtonProps {
-  icon: IconName;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'default' | 'primary' | 'secondary';
-  darkMode?: boolean;
-  disabled?: boolean;
-  onClick?: () => void;
-  'aria-label': string;
-}`}</code>
-    </pre>
-    
-    <h3>FAB (Floating Action Button)</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface FABProps {
-  icon: IconName;
-  variant?: 'primary' | 'secondary' | 'surface' | 'tertiary';
-  size?: 'small' | 'medium' | 'large';
-  extended?: boolean;
-  label?: string;
-  loading?: boolean;
-  darkMode?: boolean;
-  onClick?: () => void;
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-}`}</code>
-    </pre>
-    
-    <h2>📝 Input Components</h2>
-    
-    <h3>Input</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface InputProps {
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url';
-  value?: string;
-  placeholder?: string;
-  required?: boolean;
-  disabled?: boolean;
-  error?: string;
-  helperText?: string;
-  leftIcon?: IconName;
-  rightIcon?: IconName;
-  darkMode?: boolean;
-  onChange?: (value: string) => void;
-  onFocus?: () => void;
-  onBlur?: () => void;
-}`}</code>
-    </pre>
-    
-    <h3>Dropdown</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface DropdownProps {
-  label: string;
-  options: DropdownOption[];
-  value?: string | string[];
-  placeholder?: string;
-  searchable?: boolean;
-  multiSelect?: boolean;
-  disabled?: boolean;
-  error?: string;
-  darkMode?: boolean;
-  onChange?: (value: string | string[]) => void;
-}
-
-interface DropdownOption {
-  value: string;
-  label: string;
-  description?: string;
-  group?: string;
-  disabled?: boolean;
-}`}</code>
-    </pre>
-    
-    <h2>📦 Container Components</h2>
-    
-    <h3>Card</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface CardProps {
-  variant?: 'default' | 'outlined' | 'elevated';
-  darkMode?: boolean;
-  padding?: 'none' | 'small' | 'medium' | 'large';
-  clickable?: boolean;
-  onClick?: () => void;
-  children: React.ReactNode;
-}`}</code>
-    </pre>
-    
-    <h3>List</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface ListProps {
-  variant?: 'default' | 'outlined' | 'divided';
-  darkMode?: boolean;
-  children: React.ReactNode;
-}
-
-interface ListItemProps {
-  primaryText: string;
-  secondaryText?: string;
-  leftIcon?: IconName;
-  rightIcon?: IconName;
-  trailing?: React.ReactNode;
-  disabled?: boolean;
-  onClick?: () => void;
-}`}</code>
-    </pre>
-    
-    <h2>💬 Feedback Components</h2>
-    
-    <h3>Snackbar</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`interface SnackbarProps {
-  message: string;
-  variant?: 'default' | 'success' | 'warning' | 'error' | 'info';
-  open: boolean;
-  onClose: () => void;
-  autoHideDuration?: number;
-  position?: 'top' | 'bottom' | 'top-center' | 'bottom-center';
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
-  showCloseButton?: boolean;
-  icon?: IconName;
-  darkMode?: boolean;
-}`}</code>
-    </pre>
-    
-    <h2>🎨 Design Tokens</h2>
-    
-    <h3>Colors</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`const colors = {
-  primary: {
-    main: '#005E3F',
-    light: '#E8F5E8',
-    dark: '#003D2A',
-  },
-  semantic: {
-    success: '#4CAF50',
-    warning: '#FF9800',
-    error: '#F44336',
-    info: '#2196F3',
-  },
-  light: {
-    background: '#FFFFFF',
-    surface: '#F8F9FA',
-    text: { primary: '#1A1A1A', secondary: '#666666' },
-  },
-  dark: {
-    background: '#00150F',
-    surface: '#1A2E23',
-    text: { primary: '#FFFFFF', secondary: '#B3B3B3' },
-  },
-};`}</code>
-    </pre>
-    
-    <h2>📚 Usage Examples</h2>
-    
-    <p>For complete usage examples, see the individual component stories in the sidebar navigation.</p>
-    
-    <h3>Basic Example</h3>
-    <pre style={{ background: '#f5f5f5', padding: '12px', borderRadius: '4px', fontSize: '14px' }}>
-      <code>{`import { Button, Card, Input, NavBar } from '@aok/design-system';
-
-function MyApp() {
-  return (
-    <>
-      <NavBar
-        title="My App"
-        leftAction={{
-          icon: 'arrow-left',
-          onClick: () => history.back(),
-        }}
-      />
-      <Card>
-        <Input 
-          label="Email"
-          type="email"
-          placeholder="Enter your email"
-        />
-        <Button variant="primary" fullWidth>
-          Sign In
-        </Button>
-      </Card>
-    </>
-  );
-}`}</code>
-    </pre>
+    {/* Content Section */}
+    <div style={{ padding: '48px 32px', maxWidth: '800px', margin: '0 auto' }}>
+      
+      <p style={{ fontSize: '18px', marginBottom: '32px', color: '#666' }}>
+        Comprehensive documentation for all AOK Design System components, including props, methods, and TypeScript definitions.
+      </p>
+      
+      <h2 style={{ color: '#005E3F', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>🚀 Getting Started</h2>
+      
+      <div style={{ 
+        background: 'linear-gradient(135deg, #E8F5E8 0%, #F0F9F0 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #D4E6D4',
+        marginBottom: '32px'
+      }}>
+        <h3 style={{ margin: '0 0 16px 0', color: '#005E3F', fontWeight: '600' }}>Basic Import</h3>
+        <div style={{ 
+          background: 'white', 
+          padding: '24px', 
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontFamily: 'Monaco, "JetBrains Mono", "Fira Code", monospace',
+          border: '1px solid #D4E6D4',
+          marginBottom: '16px'
+        }}>
+          import &#123; Button, Card, Input &#125; from '@aok/design-system';<br/>
+          <br/>
+          // Import with types<br/>
+          import &#123; Button, type ButtonProps &#125; from '@aok/design-system';
+        </div>
+        
+        <h3 style={{ margin: '16px 0', color: '#005E3F', fontWeight: '600' }}>Global Styles</h3>
+        <div style={{ 
+          background: 'white', 
+          padding: '24px', 
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontFamily: 'Monaco, "JetBrains Mono", "Fira Code", monospace',
+          border: '1px solid #D4E6D4'
+        }}>
+          // Include CSS variables and base styles<br/>
+          import '@aok/design-system/dist/index.css';
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#2196F3', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>📚 Foundation Components</h2>
+      
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px', marginBottom: '48px' }}>
+        
+        {/* Button Component */}
+        <div style={{ 
+          background: 'white', 
+          padding: '32px', 
+          borderRadius: '12px',
+          border: '2px solid #E3F2FD',
+          boxShadow: '0 2px 8px rgba(33, 150, 243, 0.1)'
+        }}>
+          <h3 style={{ margin: '0 0 16px 0', color: '#2196F3', fontWeight: '600', fontSize: '24px' }}>Button</h3>
+          <p style={{ margin: '0 0 24px 0', color: '#666' }}>Primary action component with multiple variants and states.</p>
+          
+          <h4 style={{ margin: '0 0 12px 0', color: '#1A1A1A', fontWeight: '600' }}>Props</h4>
+          <div style={{ 
+            background: '#F8F9FA', 
+            padding: '16px', 
+            borderRadius: '8px',
+            border: '1px solid #E3F2FD',
+            marginBottom: '16px'
+          }}>
+            <div style={{ fontFamily: 'Monaco, monospace', fontSize: '13px' }}>
+              <div style={{ marginBottom: '8px' }}><strong>variant?:</strong> 'primary' | 'secondary' | 'text'</div>
+              <div style={{ marginBottom: '8px' }}><strong>size?:</strong> 'small' | 'medium' | 'large'</div>
+              <div style={{ marginBottom: '8px' }}><strong>disabled?:</strong> boolean</div>
+              <div style={{ marginBottom: '8px' }}><strong>loading?:</strong> boolean</div>
+              <div style={{ marginBottom: '8px' }}><strong>icon?:</strong> React.ReactNode</div>
+              <div style={{ marginBottom: '8px' }}><strong>fullWidth?:</strong> boolean</div>
+              <div><strong>onClick?:</strong> (event: MouseEvent) =&gt; void</div>
+            </div>
+          </div>
+          
+          <h4 style={{ margin: '0 0 12px 0', color: '#1A1A1A', fontWeight: '600' }}>Usage</h4>
+          <div style={{ 
+            background: '#F8F9FA', 
+            padding: '16px', 
+            borderRadius: '8px',
+            fontSize: '13px',
+            border: '1px solid #E3F2FD',
+            color: '#666'
+          }}>
+            See the Button component page for interactive examples and detailed usage patterns.
+          </div>
+        </div>
+        
+        {/* Icon Component */}
+        <div style={{ 
+          background: 'white', 
+          padding: '32px', 
+          borderRadius: '12px',
+          border: '2px solid #E3F2FD',
+          boxShadow: '0 2px 8px rgba(33, 150, 243, 0.1)'
+        }}>
+          <h3 style={{ margin: '0 0 16px 0', color: '#2196F3', fontWeight: '600', fontSize: '24px' }}>Icon</h3>
+          <p style={{ margin: '0 0 24px 0', color: '#666' }}>SVG icon component with consistent sizing and colors.</p>
+          
+          <h4 style={{ margin: '0 0 12px 0', color: '#1A1A1A', fontWeight: '600' }}>Props</h4>
+          <div style={{ 
+            background: '#F8F9FA', 
+            padding: '16px', 
+            borderRadius: '8px',
+            border: '1px solid #E3F2FD',
+            marginBottom: '16px'
+          }}>
+            <div style={{ fontFamily: 'Monaco, monospace', fontSize: '13px' }}>
+              <div style={{ marginBottom: '8px' }}><strong>name:</strong> IconName (30+ available icons)</div>
+              <div style={{ marginBottom: '8px' }}><strong>size?:</strong> 'small' | 'medium' | 'large' | number</div>
+              <div style={{ marginBottom: '8px' }}><strong>color?:</strong> 'primary' | 'secondary' | 'success' | 'warning' | 'error' | string</div>
+              <div><strong>className?:</strong> string</div>
+            </div>
+          </div>
+          
+          <h4 style={{ margin: '0 0 12px 0', color: '#1A1A1A', fontWeight: '600' }}>Usage</h4>
+          <div style={{ 
+            background: '#F8F9FA', 
+            padding: '16px', 
+            borderRadius: '8px',
+            fontSize: '13px',
+            border: '1px solid #E3F2FD',
+            color: '#666'
+          }}>
+            See the Icon component page for the complete icon library and usage examples.
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#FF9800', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>🧩 Navigation Components</h2>
+      
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px', marginBottom: '48px' }}>
+        
+        {/* NavBar Component */}
+        <div style={{ 
+          background: 'white', 
+          padding: '32px', 
+          borderRadius: '12px',
+          border: '2px solid #FFF8E1',
+          boxShadow: '0 2px 8px rgba(255, 152, 0, 0.1)'
+        }}>
+          <h3 style={{ margin: '0 0 16px 0', color: '#FF9800', fontWeight: '600', fontSize: '24px' }}>NavBar</h3>
+          <p style={{ margin: '0 0 24px 0', color: '#666' }}>Top navigation component with title, actions, and multiple variants.</p>
+          
+          <h4 style={{ margin: '0 0 12px 0', color: '#1A1A1A', fontWeight: '600' }}>Key Props</h4>
+          <div style={{ 
+            background: '#F8F9FA', 
+            padding: '16px', 
+            borderRadius: '8px',
+            border: '1px solid #FFF8E1',
+            marginBottom: '16px'
+          }}>
+            <div style={{ fontFamily: 'Monaco, monospace', fontSize: '13px' }}>
+              <div style={{ marginBottom: '8px' }}><strong>title:</strong> string</div>
+              <div style={{ marginBottom: '8px' }}><strong>subtitle?:</strong> string</div>
+              <div style={{ marginBottom: '8px' }}><strong>leftAction?:</strong> NavBarAction</div>
+              <div style={{ marginBottom: '8px' }}><strong>rightActions?:</strong> NavBarAction[]</div>
+              <div style={{ marginBottom: '8px' }}><strong>variant?:</strong> 'default' | 'prominent' | 'floating'</div>
+              <div><strong>transparent?:</strong> boolean</div>
+            </div>
+          </div>
+        </div>
+        
+        {/* TabBar Component */}
+        <div style={{ 
+          background: 'white', 
+          padding: '32px', 
+          borderRadius: '12px',
+          border: '2px solid #FFF8E1',
+          boxShadow: '0 2px 8px rgba(255, 152, 0, 0.1)'
+        }}>
+          <h3 style={{ margin: '0 0 16px 0', color: '#FF9800', fontWeight: '600', fontSize: '24px' }}>TabBar</h3>
+          <p style={{ margin: '0 0 24px 0', color: '#666' }}>Bottom navigation with badges and touch-optimized targets.</p>
+          
+          <h4 style={{ margin: '0 0 12px 0', color: '#1A1A1A', fontWeight: '600' }}>Key Props</h4>
+          <div style={{ 
+            background: '#F8F9FA', 
+            padding: '16px', 
+            borderRadius: '8px',
+            border: '1px solid #FFF8E1'
+          }}>
+            <div style={{ fontFamily: 'Monaco, monospace', fontSize: '13px' }}>
+              <div style={{ marginBottom: '8px' }}><strong>tabs:</strong> TabItem[]</div>
+              <div style={{ marginBottom: '8px' }}><strong>activeTab:</strong> string</div>
+              <div style={{ marginBottom: '8px' }}><strong>onTabChange:</strong> (tabId: string) =&gt; void</div>
+              <div><strong>variant?:</strong> 'default' | 'floating' | 'minimal'</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#4CAF50', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>📝 Form Components</h2>
+      
+      <div style={{ 
+        background: 'linear-gradient(135deg, #E8F5E8 0%, #F0F9F0 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #D4E6D4',
+        marginBottom: '32px'
+      }}>
+        <p style={{ margin: '0 0 24px 0', color: '#666', fontSize: '16px' }}>
+          All form components include built-in validation, error states, and accessibility features.
+        </p>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+          <div style={{ padding: '16px', background: 'white', borderRadius: '8px', border: '1px solid #D4E6D4' }}>
+            <h4 style={{ margin: '0 0 8px 0', color: '#4CAF50', fontWeight: '600' }}>Input</h4>
+            <p style={{ margin: '0', fontSize: '14px', color: '#666' }}>Text input with labels, validation, and icons</p>
+          </div>
+          <div style={{ padding: '16px', background: 'white', borderRadius: '8px', border: '1px solid #D4E6D4' }}>
+            <h4 style={{ margin: '0 0 8px 0', color: '#4CAF50', fontWeight: '600' }}>Dropdown</h4>
+            <p style={{ margin: '0', fontSize: '14px', color: '#666' }}>Single/multi-select with search and grouping</p>
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#673AB7', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>🔧 TypeScript Support</h2>
+      
+      <div style={{ 
+        background: 'linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #CE93D8',
+        marginBottom: '32px'
+      }}>
+        <h3 style={{ margin: '0 0 16px 0', color: '#673AB7', fontWeight: '600' }}>Fully Typed Components</h3>
+        <p style={{ margin: '0 0 16px 0', color: '#666' }}>
+          All components include comprehensive TypeScript definitions for better development experience.
+        </p>
+        
+        <div style={{ 
+          background: 'white', 
+          padding: '24px', 
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontFamily: 'Monaco, "JetBrains Mono", "Fira Code", monospace',
+          border: '1px solid #CE93D8'
+        }}>
+          // Type definitions are included<br/>
+          import &#123; Button, type ButtonProps, type IconName &#125; from '@aok/design-system';<br/>
+          <br/>
+          // Full IntelliSense support<br/>
+          const buttonProps: ButtonProps = &#123;<br/>
+          &nbsp;&nbsp;variant: 'primary', // Autocomplete available<br/>
+          &nbsp;&nbsp;size: 'large',<br/>
+          &nbsp;&nbsp;disabled: false<br/>
+          &#125;;<br/>
+          <br/>
+          // Icon names are strongly typed<br/>
+          const iconName: IconName = 'user'; // 30+ options
+        </div>
+      </div>
+      
+      <hr style={{ margin: '48px 0', border: 'none', height: '1px', background: '#E8F5E8' }} />
+      
+      <div style={{ 
+        background: '#F8F9FA', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #E8F5E8',
+        textAlign: 'center'
+      }}>
+        <h3 style={{ margin: '0 0 16px 0', color: '#005E3F', fontWeight: '600' }}>Explore Components</h3>
+        <p style={{ fontSize: '16px', color: '#666', margin: '0' }}>
+          Visit individual component pages in the sidebar to see detailed examples, interactive demos, and complete prop documentation.
+        </p>
+      </div>
+    </div>
   </div>
 );
 

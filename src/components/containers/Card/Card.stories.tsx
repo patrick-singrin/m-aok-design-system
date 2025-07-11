@@ -3,7 +3,7 @@ import { Card } from './Card';
 import { Icon } from '../../foundations/Icon/Icon';
 
 const meta: Meta<typeof Card> = {
-  title: 'Foundation/Containers/Card',
+  title: 'Components/Card',
   component: Card,
   parameters: {
     layout: 'padded',

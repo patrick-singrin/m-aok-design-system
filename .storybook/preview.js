@@ -18,6 +18,23 @@ const preview = {
       },
       defaultViewport: 'iphone13',
     },
+    options: {
+      storySort: {
+        order: [
+          'Introduction', 
+          [
+            'Getting Started',
+            'Work in Progress', 
+            'Design Guidelines', 
+            'API Reference'
+          ],
+          'Components',
+          '*'
+        ],
+      },
+      // Set the initial story selection
+      initialActive: 'introduction-getting-started--documentation'
+    },
   },
 };
 

@@ -2,140 +2,307 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 // Documentation content component
 const DocumentationContent = () => (
-  <div style={{ padding: '20px', maxWidth: '800px', lineHeight: '1.6' }}>
-    <h1>Work in Progress</h1>
-    
-    <p>The AOK Design System is actively being developed. Here's our current progress and what's coming next.</p>
-    
-    <h2>📊 Current Status</h2>
-    
-    <h3>✅ Completed (v0.8.2)</h3>
-    <ul>
-      <li><strong>Button</strong> - Primary, secondary, text variants with icons</li>
-      <li><strong>Icon</strong> - 30+ SVG icons with proper accessibility</li>
-      <li><strong>NavBar</strong> - App navigation with actions and variants</li>
-      <li><strong>TabBar</strong> - Bottom navigation with badges</li>
-      <li><strong>IconButton</strong> - Compact action buttons</li>
-      <li><strong>FAB</strong> - Floating action button with positioning</li>
-      <li><strong>Input</strong> - Text input with validation and icons</li>
-      <li><strong>Dropdown</strong> - Single/multi-select with search</li>
-      <li><strong>Card</strong> - Content containers with variants</li>
-      <li><strong>List</strong> - Structured lists with icons and actions</li>
-      <li><strong>Snackbar</strong> - Toast notifications with actions</li>
-    </ul>
-    
-    <h3>🚧 In Progress (v0.9.0)</h3>
-    <ul>
-      <li><strong>Modal</strong> - Dialog and fullscreen overlays</li>
-      <li><strong>Drawer</strong> - Side navigation panels</li>
-      <li><strong>ActionSheet</strong> - Bottom sheet actions</li>
-      <li><strong>Badge</strong> - Notification badges and labels</li>
-      <li><strong>Progress</strong> - Loading indicators and progress bars</li>
-    </ul>
-    
-    <h3>📋 Planned (v1.0.0)</h3>
-    <ul>
-      <li><strong>Checkbox</strong> - Single and grouped checkboxes</li>
-      <li><strong>Radio</strong> - Radio button groups</li>
-      <li><strong>Switch</strong> - Toggle switches</li>
-      <li><strong>Slider</strong> - Range and value sliders</li>
-      <li><strong>DatePicker</strong> - Date and time selection</li>
-      <li><strong>SearchBar</strong> - Search input with suggestions</li>
-      <li><strong>Stepper</strong> - Multi-step progress indicator</li>
-      <li><strong>Tooltip</strong> - Contextual help overlays</li>
-    </ul>
-    
-    <h2>🐛 Known Issues</h2>
-    
-    <h3>Current Limitations</h3>
-    <ul>
-      <li><strong>TabBar</strong>: Badge positioning needs refinement on smaller screens</li>
-      <li><strong>Dropdown</strong>: Keyboard navigation needs improvement for grouped options</li>
-      <li><strong>Snackbar</strong>: Queue management could be more sophisticated</li>
-      <li><strong>Dark Mode</strong>: Some edge cases with nested component themes</li>
-    </ul>
-    
-    <h3>Performance Optimizations</h3>
-    <ul>
-      <li>Bundle size optimization for icon library</li>
-      <li>Lazy loading for complex components</li>
-      <li>Animation performance on older devices</li>
-    </ul>
-    
-    <h2>🔮 Future Plans</h2>
-    
-    <h3>v1.1.0 - Advanced Components</h3>
-    <ul>
-      <li><strong>Table</strong> - Data tables with sorting and filtering</li>
-      <li><strong>Chart</strong> - Basic charts for mobile displays</li>
-      <li><strong>Timeline</strong> - Event timeline components</li>
-      <li><strong>Gallery</strong> - Image and media galleries</li>
-    </ul>
-    
-    <h3>v1.2.0 - Enhanced Features</h3>
-    <ul>
-      <li><strong>Animations</strong> - Enhanced motion system</li>
-      <li><strong>Gestures</strong> - Advanced touch interactions</li>
-      <li><strong>A11y</strong> - Enhanced accessibility features</li>
-      <li><strong>Theming</strong> - Custom theme builder</li>
-    </ul>
-    
-    <h2>🤝 Contributing</h2>
-    
-    <h3>How to Help</h3>
-    <ul>
-      <li><strong>Testing</strong>: Try components in real apps and report issues</li>
-      <li><strong>Feedback</strong>: Share API improvement suggestions</li>
-      <li><strong>Documentation</strong>: Help improve usage examples</li>
-      <li><strong>Accessibility</strong>: Test with screen readers and assistive tech</li>
-    </ul>
-    
-    <h3>Development Process</h3>
-    <ol>
-      <li><strong>Design Review</strong>: Figma specifications validated</li>
-      <li><strong>Component Development</strong>: TypeScript implementation</li>
-      <li><strong>Testing</strong>: Unit tests and accessibility testing</li>
-      <li><strong>Documentation</strong>: Storybook stories and examples</li>
-      <li><strong>Review</strong>: Code review and design validation</li>
-    </ol>
-    
-    <h2>📈 Metrics & Goals</h2>
-    
-    <h3>Component Coverage</h3>
-    <div style={{ marginLeft: '20px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', margin: '8px 0' }}>
-        <div style={{ width: '200px', height: '20px', background: '#E8F5E8', borderRadius: '10px', marginRight: '12px' }}>
-          <div style={{ width: '70%', height: '100%', background: '#005E3F', borderRadius: '10px' }}></div>
+  <div style={{ 
+    padding: '0',
+    maxWidth: '100%', 
+    lineHeight: '1.6',
+    fontFamily: '"AOK Buenos Aires Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    color: '#1A1A1A'
+  }}>
+    {/* Hero Section */}
+    <div style={{
+      background: 'linear-gradient(135deg, #005E3F 0%, #003D2A 100%)',
+      padding: '48px 32px',
+      color: 'white',
+      marginBottom: '0'
+    }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <h1 style={{ 
+          fontSize: '48px', 
+          fontWeight: 'bold', 
+          margin: '0 0 16px 0',
+          letterSpacing: '-0.5px'
+        }}>Work in Progress</h1>
+        <p style={{ 
+          fontSize: '20px', 
+          margin: '0 0 24px 0', 
+          opacity: '0.9',
+          lineHeight: '1.5'
+        }}>Current development status and upcoming features</p>
+        <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
+        }}>
+          <div style={{
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            background: '#4CAF50',
+            marginRight: '8px'
+          }}></div>
+          <span style={{ fontSize: '14px', fontWeight: '500' }}>11/45+ Components • 70% Essential Coverage</span>
         </div>
-        <span>11/45+ components (70% essential coverage)</span>
       </div>
     </div>
-    
-    <h3>Goals for v1.0</h3>
-    <ul>
-      <li>45+ production-ready components</li>
-      <li>100% WCAG 2.1 AA compliance</li>
-      <li>Complete dark mode support</li>
-      <li>Comprehensive documentation</li>
-      <li>Performance benchmarks met</li>
-    </ul>
-    
-    <h2>📞 Contact</h2>
-    
-    <p>For questions about the roadmap or to contribute:</p>
-    <ul>
-      <li><strong>Design System Team</strong>: design-system@aok.com</li>
-      <li><strong>GitHub Issues</strong>: Report bugs and feature requests</li>
-      <li><strong>Slack Channel</strong>: #design-system (internal)</li>
-    </ul>
-    
-    <hr style={{ margin: '40px 0' }} />
-    
-    <p style={{ fontSize: '14px', color: '#666' }}>
-      <strong>Last Updated</strong>: January 2024<br />
-      <strong>Next Review</strong>: February 2024<br />
-      <strong>Target v1.0</strong>: Q2 2024
-    </p>
+
+    {/* Content Section */}
+    <div style={{ padding: '48px 32px', maxWidth: '800px', margin: '0 auto' }}>
+      
+      <p style={{ fontSize: '18px', marginBottom: '32px', color: '#666' }}>
+        The AOK Design System is actively being developed. Here's our current progress and what's coming next.
+      </p>
+      
+      <h2 style={{ color: '#4CAF50', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>✅ Completed (v0.8.2)</h2>
+      <div style={{ 
+        background: 'linear-gradient(135deg, #E8F5E8 0%, #F0F9F0 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #D4E6D4',
+        marginBottom: '32px'
+      }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#005E3F', fontWeight: '600' }}>Foundation Components</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li><strong>Button</strong> - Primary, secondary, text variants with icons</li>
+              <li><strong>Icon</strong> - 30+ SVG icons with proper accessibility</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#005E3F', fontWeight: '600' }}>Navigation</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li><strong>NavBar</strong> - App navigation with actions and variants</li>
+              <li><strong>TabBar</strong> - Bottom navigation with badges</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#005E3F', fontWeight: '600' }}>Controls</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li><strong>IconButton</strong> - Compact action buttons</li>
+              <li><strong>FAB</strong> - Floating action button with positioning</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#005E3F', fontWeight: '600' }}>Inputs & Containers</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li><strong>Input</strong> - Text input with validation and icons</li>
+              <li><strong>Dropdown</strong> - Single/multi-select with search</li>
+              <li><strong>Card</strong> - Content containers with variants</li>
+              <li><strong>List</strong> - Structured lists with icons and actions</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#005E3F', fontWeight: '600' }}>Feedback</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li><strong>Snackbar</strong> - Toast notifications with actions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#FF9800', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>🚧 In Progress (v0.9.0)</h2>
+      <div style={{ 
+        background: 'linear-gradient(135deg, #FFF8E1 0%, #FFF3C4 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #FFE0B2',
+        marginBottom: '32px'
+      }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ 
+            padding: '24px', 
+            background: 'white', 
+            borderRadius: '12px',
+            border: '1px solid #FFE0B2'
+          }}>
+            <h4 style={{ margin: '0 0 12px 0', color: '#FF9800', fontWeight: '600' }}>Modal System</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Dialog overlays</li>
+              <li>Fullscreen modals</li>
+              <li>Bottom sheets</li>
+            </ul>
+          </div>
+          <div style={{ 
+            padding: '24px', 
+            background: 'white', 
+            borderRadius: '12px',
+            border: '1px solid #FFE0B2'
+          }}>
+            <h4 style={{ margin: '0 0 12px 0', color: '#FF9800', fontWeight: '600' }}>Navigation</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Drawer component</li>
+              <li>Action sheets</li>
+              <li>Side navigation panels</li>
+            </ul>
+          </div>
+          <div style={{ 
+            padding: '24px', 
+            background: 'white', 
+            borderRadius: '12px',
+            border: '1px solid #FFE0B2'
+          }}>
+            <h4 style={{ margin: '0 0 12px 0', color: '#FF9800', fontWeight: '600' }}>Indicators</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Badge component</li>
+              <li>Progress bars</li>
+              <li>Loading indicators</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#2196F3', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>📋 Planned (v1.0.0)</h2>
+      <div style={{ 
+        background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #90CAF9',
+        marginBottom: '32px'
+      }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ 
+            padding: '24px', 
+            background: 'white', 
+            borderRadius: '12px',
+            border: '1px solid #90CAF9'
+          }}>
+            <h4 style={{ margin: '0 0 12px 0', color: '#2196F3', fontWeight: '600' }}>Form Controls</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Checkbox groups</li>
+              <li>Radio button sets</li>
+              <li>Toggle switches</li>
+              <li>Range sliders</li>
+            </ul>
+          </div>
+          <div style={{ 
+            padding: '24px', 
+            background: 'white', 
+            borderRadius: '12px',
+            border: '1px solid #90CAF9'
+          }}>
+            <h4 style={{ margin: '0 0 12px 0', color: '#2196F3', fontWeight: '600' }}>Advanced Inputs</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Date/time pickers</li>
+              <li>Search with suggestions</li>
+              <li>File upload</li>
+              <li>Rich text editor</li>
+            </ul>
+          </div>
+          <div style={{ 
+            padding: '24px', 
+            background: 'white', 
+            borderRadius: '12px',
+            border: '1px solid #90CAF9'
+          }}>
+            <h4 style={{ margin: '0 0 12px 0', color: '#2196F3', fontWeight: '600' }}>Data Display</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Data tables</li>
+              <li>Charts & graphs</li>
+              <li>Timeline component</li>
+              <li>Avatar groups</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#F44336', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>🐛 Known Issues</h2>
+      
+      <div style={{ 
+        background: 'linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #EF9A9A',
+        marginBottom: '32px'
+      }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#F44336', fontWeight: '600' }}>Current Limitations</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>TabBar badge positioning on smaller screens</li>
+              <li>Dropdown keyboard navigation improvements needed</li>
+              <li>Snackbar queue management could be more sophisticated</li>
+              <li>Some dark mode edge cases with nested components</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ margin: '0 0 12px 0', color: '#F44336', fontWeight: '600' }}>Performance Optimizations</h4>
+            <ul style={{ margin: '0', paddingLeft: '20px', color: '#333' }}>
+              <li>Bundle size optimization for icon library</li>
+              <li>Lazy loading for complex components</li>
+              <li>Animation performance on older devices</li>
+              <li>Memory usage in long lists</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h2 style={{ color: '#673AB7', fontSize: '32px', marginBottom: '24px', fontWeight: 'bold' }}>📈 Progress Metrics</h2>
+      
+      <div style={{ 
+        background: 'linear-gradient(135deg, #E8F5E8 0%, #F0F9F0 100%)', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #D4E6D4',
+        marginBottom: '32px'
+      }}>
+        <div style={{ marginBottom: '24px' }}>
+          <h4 style={{ margin: '0 0 12px 0', color: '#005E3F', fontWeight: '600' }}>Component Coverage</h4>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+            <div style={{ 
+              width: '300px', 
+              height: '20px', 
+              background: '#E8F5E8', 
+              borderRadius: '10px', 
+              marginRight: '16px',
+              overflow: 'hidden'
+            }}>
+              <div style={{ width: '70%', height: '100%', background: '#005E3F', borderRadius: '10px' }}></div>
+            </div>
+            <span style={{ fontSize: '16px', fontWeight: '600', color: '#005E3F' }}>11/45+ components (70% essential coverage)</span>
+          </div>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#005E3F', marginBottom: '4px' }}>11</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>Components Ready</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#FF9800', marginBottom: '4px' }}>5</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>In Development</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#2196F3', marginBottom: '4px' }}>29+</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>Planned</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#673AB7', marginBottom: '4px' }}>70+</div>
+            <div style={{ fontSize: '14px', color: '#666' }}>Stories</div>
+          </div>
+        </div>
+      </div>
+      
+      <hr style={{ margin: '48px 0', border: 'none', height: '1px', background: '#E8F5E8' }} />
+      
+      <div style={{ 
+        background: '#F8F9FA', 
+        padding: '32px', 
+        borderRadius: '12px',
+        border: '1px solid #E8F5E8',
+        textAlign: 'center'
+      }}>
+        <p style={{ fontSize: '16px', color: '#666', margin: '0 0 8px 0' }}>
+          <strong>Last Updated</strong>: January 2024<br />
+          <strong>Next Review</strong>: February 2024<br />
+          <strong>Target v1.0</strong>: Q2 2024
+        </p>
+      </div>
+    </div>
   </div>
 );
 

@@ -3,7 +3,7 @@ import { Snackbar } from './Snackbar';
 import { useState } from 'react';
 
 const meta: Meta<typeof Snackbar> = {
-  title: 'Foundation/Feedback/Snackbar',
+  title: 'Components/Snackbar',
   component: Snackbar,
   parameters: {
     layout: 'fullscreen',

@@ -3,7 +3,7 @@ import { Input } from './Input';
 import { useState } from 'react';
 
 const meta: Meta<typeof Input> = {
-  title: 'Foundation/Inputs/Input',
+  title: 'Components/Input',
   component: Input,
   parameters: {
     layout: 'padded',

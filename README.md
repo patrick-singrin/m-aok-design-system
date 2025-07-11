@@ -25,11 +25,20 @@ function App() {
 
 ## 📚 Documentation
 
-View the component library in [Storybook](http://localhost:6006):
+### Live Documentation
+🔗 **[View Live Storybook](https://aok-design-system.netlify.app)** - Complete component library and design guidelines
 
+### Local Development
 ```bash
+# Start Storybook locally
 npm run storybook
+
+# Build for production  
+npm run build-storybook
 ```
+
+### Deployment
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for instructions on deploying to Netlify via GitHub.
 
 ## 🎨 Design Tokens
 
@@ -111,9 +120,11 @@ npm run build
 
 ## 📖 Resources
 
-- [Figma Design System](https://figma.com/aok-design-system)
-- [Component Guidelines](./docs/guidelines.md)
-- [Accessibility Standards](./docs/accessibility.md)
+- [Live Storybook](https://aok-design-system.netlify.app) - Interactive component documentation
+- [Deployment Guide](./DEPLOYMENT.md) - How to deploy to Netlify
+- [Figma Design System](https://figma.com/aok-design-system) - Design specifications
+- [Component Guidelines](./docs/guidelines.md) - Development standards
+- [Accessibility Standards](./docs/accessibility.md) - A11y requirements
 
 ## 📄 License
 

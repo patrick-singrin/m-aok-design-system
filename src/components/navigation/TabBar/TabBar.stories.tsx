@@ -3,7 +3,7 @@ import { TabBar, TabItem } from './TabBar';
 import { useState } from 'react';
 
 const meta: Meta<typeof TabBar> = {
-  title: 'Foundation/Navigation/TabBar',
+  title: 'Components/TabBar',
   component: TabBar,
   parameters: {
     layout: 'fullscreen',

@@ -15,7 +15,7 @@ const FilterIcon = () => (
 );
 
 const meta: Meta<typeof NavBar> = {
-  title: 'Foundation/Navigation/NavBar',
+  title: 'Components/NavBar',
   component: NavBar,
   parameters: {
     layout: 'fullscreen',
